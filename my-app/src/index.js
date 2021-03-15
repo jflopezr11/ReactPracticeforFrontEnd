@@ -1,24 +1,51 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { ChakraProvider } from "@chakra-ui/react";
 
 class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+
   render() {
     return (
-      <button className="square">
-        {/* TODO */}
+      <button 
+        className="square" 
+        onClick={() => this.props.onClick()}
+        >
+        {this.props.value}
       </button>
     );
-  }
+  }  
 }
 
 class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      squares: Array(9).fill(null),
+    };
+  }
+
+  handleClick(i) {
+    const squares = this.state.squares.slice(); 
+    squares[i] = 'X';
+    this.setState({squares: squares})
+  }
+
   renderSquare(i) {
-    return <Square />;
+    return <Square 
+      value={this.state.squares[i]}
+      onClick={() => this.handleClick(i)} 
+    />;
   }
 
   render() {
-    const status = 'Next player: X';
+    const status = "Next player: X";
 
     return (
       <div>
@@ -46,22 +73,21 @@ class Board extends React.Component {
 class Game extends React.Component {
   render() {
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board />
+      <ChakraProvider>
+        <div className="game">
+          <div className="game-board">
+            <Board />
+          </div>
+          <div className="game-info">
+            <div>{/* status */}</div>
+            <ol>{/* TODO */}</ol>
+          </div>
         </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
+      </ChakraProvider>
     );
   }
 }
 
 // ========================================
 
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Game />, document.getElementById("root"));
