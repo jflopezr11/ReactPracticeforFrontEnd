@@ -79,3 +79,9 @@ let number = Number(prompt('Pick a number!'));
 if (!Number.isNaN(number)) {
 	console.log('Your number is the square root of ' + number * number);
 }
+
+//array
+
+let badSongTitles = [ 'YO', 'Sheesh', 'Savage', 'p0ggers' ];
+
+badSongTitles.push('Fs in Chat');
