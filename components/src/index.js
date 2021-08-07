@@ -4,6 +4,7 @@ import styles from './styles.css';
 import FunctionComp from './FunctionalComponent.js';
 import ClassComp from './ClassComponent.js';
 import { ChakraProvider } from '@chakra-ui/react';
+import JsxPractice from './jsxPractice';
 
 /* Okay, this is me Practicing Components and Props. By the end of this  I should know:
     -Functional Components
@@ -18,6 +19,7 @@ const ShowComponents = () => {
 		<ChakraProvider>
 			<ClassComp />
 			<FunctionComp />
+			<JsxPractice />
 		</ChakraProvider>
 	);
 };
