@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './styles.css';
 import FunctionComp from './FunctionalComponent.js';
 import ClassComp from './ClassComponent.js';
 import { ChakraProvider } from '@chakra-ui/react';
 import JsxPractice from './jsxPractice';
+import PropsPracticeOne from './Props1.js';
 
 /* Okay, this is me Practicing Components and Props. By the end of this  I should know:
     -Functional Components
@@ -20,6 +20,7 @@ const ShowComponents = () => {
 			<ClassComp />
 			<FunctionComp />
 			<JsxPractice />
+			<PropsPracticeOne />
 		</ChakraProvider>
 	);
 };

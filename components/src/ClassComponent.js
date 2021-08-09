@@ -1,13 +1,14 @@
 import React from 'react';
+import { Box, Text } from '@chakra-ui/react';
 
 class ClassComp extends React.Component {
 	render() {
 		return (
-			<div>
-				<h1 className="classComp" styles={'font-size: 2em;'}>
+			<Box textAlign="center" border="2px" borderRadius="12px">
+				<Text bgGradient="linear(to-l, #7928CA,#FF0080)" bgClip="text" fontSize="6xl" fontWeight="extrabold">
 					Hello I am a Class Component
-				</h1>
-			</div>
+				</Text>
+			</Box>
 		);
 	}
 }
