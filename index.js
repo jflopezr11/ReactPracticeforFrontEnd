@@ -2,7 +2,7 @@
 
 //If Statments
 // Example 1
-if (1 === 1) {
+/* if (1 === 1) {
 	console.log('Correct!');
 }
 
@@ -28,7 +28,7 @@ if (num % 2 !== 0) {
 2- meh! 
 1- 'you gotta pick it up, kid' 
 */
-
+/*
 let rating = Math.floor(Math.random() * 3) + 1;
 
 if (rating === 3) {
@@ -85,3 +85,19 @@ if (!Number.isNaN(number)) {
 let badSongTitles = [ 'YO', 'Sheesh', 'Savage', 'p0ggers' ];
 
 badSongTitles.push('Fs in Chat');
+*/
+
+const xhr = new XMLHttpRequest();
+
+const url = 'https://api.waifu.pics/sfw/highfive';
+
+xhr.responseType = 'json';
+
+xhr.onreadystatechange = () => {
+	if (xhr.readyState === XMLHttpRequest.DONE) {
+		return xhr.response;
+	}
+};
+
+xhr.open('GET', url);
+xhr.send();

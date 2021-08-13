@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Badge, Image, Grid, GridItem, Text } from '@chakra-ui/react';
+import { Box, Badge, Image, Grid, GridItem, Text, SimpleGrid } from '@chakra-ui/react';
 
 const FunctionComp = () => {
 	const coffeeProperty = {
@@ -12,7 +12,7 @@ const FunctionComp = () => {
 	};
 
 	return (
-		<Grid h="500px" templateColumns="repeat(1, 1fr)" gap={12}>
+		<SimpleGrid h="500px" gap={12}>
 			<Box>
 				<Text bgGradient="linear(to-l, #22c1c3, #fdbb2d)" bgClip="text" fontSize="6xl">
 					I am a Functional Component
@@ -40,7 +40,7 @@ const FunctionComp = () => {
 					</Grid>
 				</Box>
 			</Box>
-		</Grid>
+		</SimpleGrid>
 	);
 };
 

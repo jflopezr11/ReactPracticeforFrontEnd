@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Box, Flex, Grid, Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 
 /* this file is to help me with JSX using ChakraUI as CSS Framework */
 
@@ -12,8 +11,6 @@ const JsxPractice = () => {
 			pic3: '',
 			pic4: ''
 		};
-
-		let newPic;
 
 		console.log(`Hey, you\'ve clicked me! `);
 	}

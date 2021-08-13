@@ -7,7 +7,6 @@ import { GetLocation } from './SeasonDisplay';
 const App = () => {
 	return (
 		<ChakraProvider>
-			<HelloWorld />
 			<GetLocation />
 		</ChakraProvider>
 	);
